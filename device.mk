@@ -4,11 +4,17 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Fingerprint
+TARGET_HAS_FOD := true
+
 # A/B
 TARGET_IS_VAB := true
 
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
+
+# Properties
+include $(LOCAL_PATH)/properties/default.mk
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -32,6 +38,8 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     libpiex_shim
+    libMegviiFacepp-0.5.2 \
+    libmegface
 
 # IDC
 PRODUCT_COPY_FILES += \
@@ -46,4 +54,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/munch/munch-vendor.mk)
+$(call inherit-product, vendor/xiaomi/psyche/psyche-vendor.mk)

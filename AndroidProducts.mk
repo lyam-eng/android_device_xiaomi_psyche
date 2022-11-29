@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_munch.mk
+    $(LOCAL_DIR)/arrow_psyche.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_munch-user \
-    arrow_munch-userdebug \
-    arrow_munch-eng
+    arrow_psyche-user \
+    arrow_psyche-userdebug \
+    arrow_psyche-eng
