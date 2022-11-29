@@ -490,22 +490,22 @@
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
 
-    <!-- Indicates whether device has a power button fingerprint sensor. -->
-    <bool name="config_is_powerbutton_fps" translatable="false">true</bool>
+    <!-- <!-\- Indicates whether device has a power button fingerprint sensor. -\-> -->
+    <!-- <bool name="config_is_powerbutton_fps" translatable="false">true</bool> -->
 
-    <!-- An array of arrays of side fingerprint sensor properties relative to each display.
-         Note: this value is temporary and is expected to be queried directly
-         from the HAL in the future. -->
-    <array name="config_sfps_sensor_props" translatable="false">
-        <item>@array/config_sfps_sensor_props_0</item>
-    </array>
+    <!-- <!-\- An array of arrays of side fingerprint sensor properties relative to each display. -->
+    <!--      Note: this value is temporary and is expected to be queried directly -->
+    <!--      from the HAL in the future. -\-> -->
+    <!-- <array name="config_sfps_sensor_props" translatable="false"> -->
+    <!--     <item>@array/config_sfps_sensor_props_0</item> -->
+    <!-- </array> -->
 
-    <array name="config_sfps_sensor_props_0" translatable="false">
-        <item>local:4630946736638489729</item>
-        <item>1080</item>
-        <item>965</item>
-        <item>115</item>
-    </array>
+    <!-- <array name="config_sfps_sensor_props_0" translatable="false"> -->
+    <!--     <item>local:4630946736638489729</item> -->
+    <!--     <item>1080</item> -->
+    <!--     <item>965</item> -->
+    <!--     <item>115</item> -->
+    <!-- </array> -->
 
     <!-- The display uses different gamma curves for different refresh rates. It's hard for panel
          vendor to tune the curves to have exact same brightness for different refresh rate. So
@@ -530,4 +530,40 @@
          If non-positive, then the refresh rate is unchanged even if thresholds are configured. -->
     <integer name="config_defaultRefreshRateInZone">120</integer>
 
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false" >
+      <!--
+        <item>sensorLocationX</item>
+        <item>sensorLocationY</item>
+        <item>sensorRadius</item>
+      -->
+        <item>540</item>
+        <item>2163</item>
+        <item>107</item>
+    </integer-array>
+
+    <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
+    <integer name="config_udfps_illumination_transition_ms">0</integer>
+
+    <!-- If true, the screen can be rotated via the accelerometer in all 4
+         rotations as the default behavior. -->
+    <bool name="config_allowAllRotations">true</bool>
+
+    <!-- Delay that allows some content to arrive at the display before switching
+         from DOZE to ON, in millis. -->
+    <integer name="config_wakeUpDelayDoze">32</integer>
+
+    <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
+
+    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
+
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+         and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false" >
+        <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
+    </string-array>
 </resources>
