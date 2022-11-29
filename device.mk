@@ -16,6 +16,11 @@ $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 # Properties
 include $(LOCAL_PATH)/properties/default.mk
 
+# Overlays for UI
+PRODUCT_PACKAGES += \
+    FrameworkResOverlayPsyche \
+    SystemUIOverlayPsyche
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
