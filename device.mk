@@ -42,6 +42,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libpiex_shim \
     libMegviiFacepp-0.5.2 \
     libmegface
 
