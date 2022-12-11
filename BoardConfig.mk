@@ -28,5 +28,9 @@ TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_psyche
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/vintf/xiaomi_framework_matrix.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest.xml
+
 # Inherit from the proprietary version
 include vendor/xiaomi/psyche/BoardConfigVendor.mk
+

@@ -46,6 +46,9 @@ PRODUCT_PACKAGES += \
     libMegviiFacepp-0.5.2 \
     libmegface
 
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.touchfeature@1.0.vendor
+
 # IDC
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc)
