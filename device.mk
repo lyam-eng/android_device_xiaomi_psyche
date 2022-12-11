@@ -47,7 +47,9 @@ PRODUCT_PACKAGES += \
     libmegface
 
 PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.touchfeature@1.0.vendor
+    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor \
+    vendor.xiaomi.hardware.touchfeature@1.0.vendor \
+    vendor.xiaomi.hardware.displayfeature@1.0.vendor
 
 # IDC
 PRODUCT_COPY_FILES += \
